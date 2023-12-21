@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form Redesigned</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@400&display=swap">
+    <style>
+        body {
+            background-color: #eee;
+            margin: 0;
+            padding: 0;
+            font-family: 'Karla', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #logoContainer {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #logo {
+            max-width: 50px; /* Anpassen der Größe */
+            height: auto;
+        }
+
+        h1 {
+            color: #333; /* Dunkle Textfarbe */
+            font-weight: bold;
+        }
+
+        
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333; /* Dunkle Textfarbe */
+        }
+
+        input,
+        textarea {
+            width: 100%; /* Änderung der Breite auf 100% */
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin: auto; /* Zentrierung der Eingabefelder */
+            resize: none;
+        }
+
+        input[type="submit"] {
+            background-color: #000000; 
+            color: #fff; 
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(36, 36, 36); 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="logoContainer">
+        <img id="logo" src="img/logo-dark.png" alt="Logo">
+    </div>
+
+    <h1>CONTACT ME</h1>
+
+    <form action="https://formspree.io/f/xgejjdgz" method="POST">
+        <label for="name">NAME:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">EMAIL:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">MESSAGE:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <label for="portfolio">PORTFOLIO LINK:</label>
+        <input type="url" id="portfolio" name="portfolio" required>
+
+        <input type="submit" value="SUBMIT">
+    </form>
+
+</body>
+</html>
